@@ -1,9 +1,14 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+
+
+
+// mocked to do import forn db
 var todos = [
   {description: 'Dev a todolist app'},
   {description: 'Dev the todolist backend'},

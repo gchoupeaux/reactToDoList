@@ -1,23 +1,37 @@
+import $ from 'jquery';
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// window.$ = window.jQuery=jquery;
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>To do list</h2>
-        </div>
-          <ul className="App-list">
+      
+          <h2>To Do List</h2>
+
+          <input className="form-control" type="text"/>
+          <button onClick={ () => {
+             console.log('clicked: ', $('.form-control').val());
+             this.props.todos.push({description: $('.form-control').val()})
+          } }> <span>Add</span></button>
+          
+          <ul className="todos">
             {this.props.todos.map(todo => <li>{todo.description}</li>)}
           </ul>
+          
       </div>
     );
   }
 }
 
 export default App;
+
+
+    
+
+    
+    
 
 
